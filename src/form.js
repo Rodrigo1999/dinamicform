@@ -232,7 +232,7 @@ export default function(props, ref){
 //---------------------------------------------- COMPONENTE -------------------------------------
     return (
 
-        <form className='AutoForm' onSubmit={submit}>
+        <form className='AutoForm' onSubmit={submit} style={{width:'100%'}}>
             {render(fields)}
             {!hiddenButtonSubmit&&(beforeButton||onSubmit||afterButton) &&
                 <div className='d-flex align-items-center justify-content-end mt-3'>

@@ -1,6 +1,6 @@
 {
   "name": "dinamicform",
-  "version": "1.0.1",
+  "version": "1.0.8",
   "description": "Componente react para formulários, com o dinamicform você poderá criar formulários customizáveis e usar onde e como quiser",
   "main": "./lib/index.js",
   "scripts": {
@@ -9,14 +9,8 @@
   },
   "peerDependencies": {
     "classnames": "^2.2.6",
-    "react": ">=16.x",
-    "react-dom": ">=16.x",
-    "styled-components": "^5.2.1"
-  },
-  "dependencies": {
-    "classnames": "^2.2.6",
-    "react": ">=16.x",
-    "react-dom": ">=16.x",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
     "styled-components": "^5.2.1"
   },
   "repository": {
@@ -61,6 +55,9 @@
     "babel-preset-es2015": "^6.24.1",
     "babel-preset-react": "^6.24.1",
     "babel-preset-stage-0": "^6.24.1",
+    "classnames": "^2.2.6",
+    "css-loader": "^5.0.1",
+    "extract-text-webpack-plugin": "^3.0.2",
     "path": "^0.12.7",
     "prop-types": "^15.7.2",
     "react": "^17.0.1",
@@ -68,6 +65,7 @@
     "react-input-mask": "^2.0.4",
     "react-toastify": "^6.2.0",
     "reactstrap": "^8.8.1",
+    "styled-components": "^5.2.1",
     "webpack": "^5.13.0",
     "webpack-cli": "^4.3.1"
   }
