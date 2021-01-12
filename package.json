@@ -2,25 +2,73 @@
   "name": "dinamicform",
   "version": "1.0.1",
   "description": "Componente react para formulários, com o dinamicform você poderá criar formulários customizáveis e usar onde e como quiser",
-  "main": "./dist/index.js",
+  "main": "./lib/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack"
   },
   "peerDependencies": {
+    "classnames": "^2.2.6",
     "react": ">=16.x",
     "react-dom": ">=16.x",
-    "styled-components": "^5.2.1",
-    "classnames": "^2.2.6"
+    "styled-components": "^5.2.1"
+  },
+  "dependencies": {
+    "classnames": "^2.2.6",
+    "react": ">=16.x",
+    "react-dom": ">=16.x",
+    "styled-components": "^5.2.1"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Rodrigo1999/dinamicform.git"
   },
-  "keywords": ["formulário", "form", "forms", "fields", "react", "react hooks", "validation", "validação", "dinamic", "formulario", "component", "custom", "auto", "field"],
+  "keywords": [
+    "formulário",
+    "form",
+    "forms",
+    "fields",
+    "react",
+    "react hooks",
+    "validation",
+    "validação",
+    "dinamic",
+    "formulario",
+    "component",
+    "custom",
+    "auto",
+    "field"
+  ],
   "author": "Rodrigo Santos",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/Rodrigo1999/dinamicform/issues"
   },
-  "homepage": "https://github.com/Rodrigo1999/dinamicform#readme"
+  "homepage": "https://github.com/Rodrigo1999/dinamicform#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.12.10",
+    "@babel/core": "^7.12.10",
+    "@babel/plugin-proposal-optional-chaining": "^7.12.7",
+    "@babel/preset-env": "^7.12.11",
+    "@babel/preset-es2015": "^7.0.0-beta.53",
+    "@babel/preset-react": "^7.12.10",
+    "@babel/runtime": "^7.12.5",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^8.2.2",
+    "babel-plugin-lodash": "^3.3.4",
+    "babel-plugin-react-transform": "^3.0.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-0": "^6.24.1",
+    "path": "^0.12.7",
+    "prop-types": "^15.7.2",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "react-input-mask": "^2.0.4",
+    "react-toastify": "^6.2.0",
+    "reactstrap": "^8.8.1",
+    "webpack": "^5.13.0",
+    "webpack-cli": "^4.3.1"
+  }
 }
