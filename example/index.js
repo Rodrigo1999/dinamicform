@@ -1,5 +1,5 @@
 import React, {forwardRef, useState} from 'react';
-import Form from '../index';
+import Form from '../dist/index';
 
 export default forwardRef(Form.bind(({
     errors,
