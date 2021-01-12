@@ -1,0 +1,6 @@
+html, body, * {
+    box-sizing: border-box;
+}
+.AutoForm{
+    width: 100%;
+}
