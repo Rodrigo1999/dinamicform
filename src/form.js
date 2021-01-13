@@ -191,7 +191,7 @@ export default function(props, ref){
     }), [components]);
     function _fields(f){
         if(f.fields) return render(f.fields);
-        if(f.type=='component') return f?.content({...props, handleValue, submit, clean, fields});
+        if(f.type=='component') return f?.content({...props, handleValue, submit, clean, fields, getAllFields:getAllFields(fields)});
         return comp(f)?.content(f);
     }
     let render = useCallback((fields) => {
