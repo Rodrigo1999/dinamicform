@@ -213,7 +213,6 @@ export default function(props, ref){
                             {...grid.col}
                             {...f.contentProps} 
                             style={{
-                                ...(!f.xl&&!f.sm&&!f.md&&!f.lg?{maxWidth: 8.33333333*(f.col||12)+'%', flexBasis: 8.33333333*(f.col||12)+'%'}:{}),
                                 ...grid.col?.style,
                                 ...field.contentProps?.style,
                                 ...f.contentProps?.style,

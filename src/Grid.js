@@ -22,8 +22,8 @@ let Col = styled.div`
         ['xs', 'xl', 'sm', 'md', 'lg'].forEach(e=>{
             literal+=`
                 @media(min-width: ${props.breakpoints[e]}px) {
-                    max-width: ${props[e] ? `${(100/12) * props[e]}%` : undefined};
-                    flex-basis: ${props[e] ? `${(100/12) * props[e]}%` : undefined};
+                    max-width: ${props[e] ? `${100*props[e]/12}%` : undefined};
+                    flex-basis: ${props[e] ? `${100*props[e]/12}%` : undefined};
                 }
             `
         })
