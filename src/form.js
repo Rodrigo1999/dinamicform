@@ -1,5 +1,5 @@
 import React, {useState, useEffect, useCallback, useImperativeHandle} from 'react';
-//import './index.css';
+import './index.css';
 import Grid from './Grid';
 import classnames from 'classnames';
 import {objectToForm, delay} from './utils';
@@ -234,7 +234,7 @@ export default function(props, ref){
         <form className='AutoForm' onSubmit={submit} style={{width:'100%'}}>
             {render(fields)}
             {!hiddenButtonSubmit&&(beforeButton||onSubmit||afterButton) &&
-                <div className='d-flex align-items-center justify-content-end mt-3'>
+                <div className='content-buttons'>
                     {beforeButton}
                     {onSubmit && button}
                     {afterButton}

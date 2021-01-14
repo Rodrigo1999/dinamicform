@@ -4,3 +4,9 @@ html, body, * {
 .AutoForm{
     width: 100%;
 }
+.AutoForm .content-buttons{
+    display: flex;
+    align-items:center;
+    justify-content: flex-end;
+    margin-top: 0.5rem !important;
+}
