@@ -2,9 +2,8 @@ import React, {useState, useEffect, useCallback, useImperativeHandle} from 'reac
 import './index.css';
 import Grid from './Grid';
 import classnames from 'classnames';
-import {objectToForm, delay} from './utils';
+import {objectToForm} from './utils';
 
-export {delay}
 export default function(props, ref){
     let {
         fields,

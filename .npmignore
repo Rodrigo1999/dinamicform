@@ -8,6 +8,7 @@ coverage
 
 # production
 build
+dist
 src
 package-lock.json
 webpack.config.js
