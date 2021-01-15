@@ -1,6 +1,6 @@
 {
   "name": "dinamicform",
-  "version": "1.2.0",
+  "version": "1.2.2",
   "description": "Componente react para formulários, com o dinamicform você poderá criar formulários customizáveis e usar onde e como quiser",
   "main": "./lib/index.js",
   "scripts": {

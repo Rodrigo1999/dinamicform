@@ -112,7 +112,7 @@ Abaixo há um exemplo, com um input tag bem simples para você entender o concei
 |breakpoints | json | Por padrão é os valores que você vê acima, aqui você pode configurar os breakpoints de sua aplicação, deixando-a responsíva. |
 |errors | array | retorna um array de funções responsáveis por customizar os erros do formuláro, você pode criar seus próprios erros customizáveis, como no exemplo acima, tem uma função que valida de forma básica se os campos que tem o atributo <b>required</b> está vazio ou não.|
 | onError | functon | função de evento, dispara toda vez que o formulário é submetido, porém se ainda encontrar erro em algum campo esse ouvinte retorna um array de campos invalidos e suas respectivas mensagens de erro, exemplo: ` [{name:'Campo Obrigatório'}, {username:'Formato Inválido'}] ` |
-| components | array | esse é o principal, aqui você coloca seus campos customizáveis, em cada json, temos o <b>type</b>: o tipo do campo; <b>content</b>: o conteúdo, o componente de campo em si. |
+| components | array | esse é o principal, aqui você coloca seus campos customizáveis, em cada json, temos o <b>type</b>: o tipo do campo, você também pode passar múltiplos types `type: ['default', 'text']` <b>content</b>: o conteúdo, o componente de campo em si. |
 |button| jsx/html | campo de submição do formulário. |
 
 
@@ -194,7 +194,7 @@ Você também pode passar suas próprias props personalizadas e pegar em Form.co
 |ref | | passo a referência do formulário para acessar certas propriedades. |
 |forwardRef |  | caso eu não comsiga usar o ref (tem casos assim), eu tenho o forwardRef para aí sim me trazer o ref.|
 |formData | Bolean | por padrão o onSubmit traz dados em json, mas se eu quiser trazer no formato form/data eu passo essa props. |
-| init | function | escuto todas as propriedades, e posso salvar em uma variável ou algo assim, não confundir com ref, são conceitos diferentes. Padrão false.|
+| init | function | escuto todas as propriedades, e posso salvar em uma variável ou algo assim, não confundir com ref, são conceitos diferentes.|
 |fields | array | passo os campos que quero no formulário. |
 |fixedFields| array | campos fixados, são campos que já quero definir por padrão, a primeira vista não parece necessário mas em breve irão entender.|
 |onChangeField|array|toda vez que um campo for alterado eu escuto ele por aqui.|

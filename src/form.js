@@ -184,21 +184,19 @@ export default function(props, ref){
         getAllFields:getAllFields(fields)
     })
 //---------------------------------------------- controle de linhas e colunas -------------------------------------
-    let comp = useCallback((f) => components.find(c => {
-        let type = [].concat(c.type);
-        return type.includes(f.type)||type.includes('default');
-    }), [components]);
+    let comp = useCallback((f) => components.find(c => [].concat(c.type).includes(f.type)), [components]);
     function _fields(f){
         if(f.fields) return render(f.fields);
         if(f.type=='component') return f?.content({...props, handleValue, submit, clean, fields, getAllFields:getAllFields(fields)});
-        return comp(f)?.content(f);
+
+        return (comp(f)||components.find(e => [].concat(e.type).includes('default'))).content(f);
     }
     let render = useCallback((fields) => {
         
         return(
             <Grid row alignItems="flex-start" spacing={spacing||2} {...grid.row}>
                 {fields.filter(e => e.visible!=false).map(f=> {
-                    let field = comp(f);
+                    let field = comp(f)||components.find(e => [].concat(e.type).includes('default'));
                     return (
                         <Grid 
                             breakpoints={breakpoints} 
