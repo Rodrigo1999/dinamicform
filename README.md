@@ -356,8 +356,35 @@ No Form.config.js na parte de components, no campo de type igual a select pego `
         /*...*/
     },
 ```
+<hr/>
+
+> Quase todo formulário tem um select, e em muitos casos um campo de seleção depende de outro, por exemplo, ao selecionar um estado queremos carregar as cidades daquele estado em outro campo de seleção para o usuário escolher. Suponhamos que esses dois campos são obrigatórios e que um usuário selecione um estado e uma cidade, mas logo depois mude o valor novamente do campo estado, em teoria o campo cidade deve se limpar também, caso contrário enviariamos dados errado para o servidor. Automaticamente isso não acontece, precisamos informar ao formulário qual campo depende de outro, então passamos um atributo chamado ` dependence: <indicador>-<ordem> `
+
+```js
+    {
+        col:6,
+        name:'country',
+        options:[/*...*/],
+        dependence: 'snack-1'
+    },
+    {
+        col:6,
+        name:'state',
+        options:[/*...*/],
+        dependence: 'snack-2'
+    },
+    {
+        col:6,
+        name:'city',
+        options:[/*...*/],
+        dependence: 'snack-3'
+    },
+```
+
+o atributo é ` dependence: <indicador>-<ordem> ` aqui nesse exemplo coloquei "indicator" como `snack` (você escolhe o nome, é para diferenciar caso haja outros campos com outras dependência) e em seguida coloquei a ordem de dependência, significa que o campo city depende do campo state que depende do campo country, ou olhando de forma inversa,
+country é superior a state que é superior a city, vai do menor para o maior. assim, toda vez que eu mudar o campo country por exemplo, o campo state e city irão limpar seus valores. Recomendo ver na prática.
 
 ## Fim
 
 Bom, por enquanto é isso, espero que eu não esteja esquecendo de nada kkk, quem quiser contrinuir, comentar algo, segue meu repositório.
-Ah sim, versão estável a partir da 1.1.6, as anteriores eram testes no npm.
+Ah sim, versão estável a partir da 1.1.6, as anteriores eram testes no npm. Em breve estarei colocando uma pasta de exemplos.
