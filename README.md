@@ -4,7 +4,7 @@
     npm install --save dinamicform
 ```
 
-[Demos](https://codesandbox.io/s/great-noyce-32wkc?file=/src/App.js)
+**[DEMO](https://codesandbox.io/s/demodinamicform-32wkc?file=/src/App.js)**
 
 ## O que é o dinamicform ?
 
