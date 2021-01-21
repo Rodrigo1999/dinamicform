@@ -145,6 +145,10 @@ Você também pode passar suas próprias props personalizadas e pegar em Form.co
         values={{name: 'Rodrigo', user: 'rodrigo@email.com'}} 
         fixedValues={{tel:01589999888888}}
         spacing={2}
+        alignItems='flex-start'
+        justify={/*...*/}
+        alignContent={/*...*/}
+        direction={/*...*/}
         ref={/*...*/}
         forwardRef={/*...*/}
         formData={false}
@@ -193,6 +197,10 @@ Você também pode passar suas próprias props personalizadas e pegar em Form.co
 | values | json | aqui eu passo o valor inicial do formulário, útil quando queremos editar um formulário, caso for cadastro não precio passar essa props ou passo como um objeto vazio. Padrão undefined. |
 |fixedValues|json|valores fixados, no momento da submição o formulário irá retornar os resultados dessa props também junto aos outros campos, no exemplo acima temos um número de telefone fictício.|
 |spacing| numeric | Padrão: 2. Vai de 0 ao infinito, define o espaçamento das colunas. Internamente o formulário tem uma grid, podemos vê isso no `col:4` explico sobre isso mais tarde.|
+|alignItems| string | Padrão flex-start, este é o align-items do flexbox, você passa os valore que ele aceita |
+|justify| string | Padrão undefined, este é ojustify-content do flexbox, você passa os valore que ele aceita |
+|alignContent| string | Padrão undefined, este é o align-content do flexbox, você passa os valore que ele aceita |
+|direction| string | Padrão undefined, este é o flex-direction do flexbox, você passa os valore que ele aceita |
 |ref | | passo a referência do formulário para acessar certas propriedades. |
 |forwardRef |  | caso eu não comsiga usar o ref (tem casos assim), eu tenho o forwardRef para aí sim me trazer o ref.|
 |formData | Bolean | por padrão o onSubmit traz dados em json, mas se eu quiser trazer no formato form/data eu passo essa props. |
@@ -388,5 +396,5 @@ country é superior a state que é superior a city, vai do menor para o maior. a
 
 ## Fim
 
-Bom, por enquanto é isso, espero que eu não esteja esquecendo de nada kkk, quem quiser contrinuir, comentar algo, segue meu repositório.
-Ah sim, versão estável a partir da 1.1.6, as anteriores eram testes no npm. Em breve estarei colocando uma pasta de exemplos.
+Bom, por enquanto é isso, espero que eu não esteja esquecendo de nada kkk, quem quiser contribuir, comentar algo, segue meu repositório.
+Ah sim, versão estável a partir da 1.2.3, as anteriores eram testes no npm. Em breve estarei colocando uma pasta de exemplos.

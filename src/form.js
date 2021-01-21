@@ -19,7 +19,11 @@ export default function(props, ref){
         _onSubmit=()=>null,
         onChangeField=()=>null,
         init=()=>null,
-        forwardRef
+        forwardRef,
+        alignItems,
+        justify,
+        alignContent,
+        direction
     } = props;
 
     let [values, setValues] = useState({});
@@ -194,7 +198,15 @@ export default function(props, ref){
     let render = useCallback((fields) => {
         
         return(
-            <Grid row alignItems="flex-start" spacing={spacing||2} {...grid.row}>
+            <Grid 
+                row 
+                alignItems={'flex-start'||alignItems} 
+                justify={justify}
+                alignContent={alignContent}
+                direction={direction}
+                spacing={spacing||2} 
+                {...grid.row}
+            >
                 {fields.filter(e => e.visible!=false).map(f=> {
                     let field = comp(f)||components.find(e => [].concat(e.type).includes('default'));
                     return (
