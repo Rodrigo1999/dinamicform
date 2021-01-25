@@ -198,7 +198,7 @@ Você também pode passar suas próprias props personalizadas e pegar em Form.co
 |fixedValues|json|valores fixados, no momento da submição o formulário irá retornar os resultados dessa props também junto aos outros campos, no exemplo acima temos um número de telefone fictício.|
 |spacing| numeric | Padrão: 2. Vai de 0 ao infinito, define o espaçamento das colunas. Internamente o formulário tem uma grid, podemos vê isso no `col:4` explico sobre isso mais tarde.|
 |alignItems| string | Padrão flex-start, este é o align-items do flexbox, você passa os valore que ele aceita |
-|justify| string | Padrão undefined, este é ojustify-content do flexbox, você passa os valore que ele aceita |
+|justify| string | Padrão undefined, este é o justify-content do flexbox, você passa os valore que ele aceita |
 |alignContent| string | Padrão undefined, este é o align-content do flexbox, você passa os valore que ele aceita |
 |direction| string | Padrão undefined, este é o flex-direction do flexbox, você passa os valore que ele aceita |
 |ref | | passo a referência do formulário para acessar certas propriedades. |

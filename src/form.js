@@ -200,7 +200,7 @@ export default function(props, ref){
         return(
             <Grid 
                 row 
-                alignItems={'flex-start'||alignItems} 
+                alignItems={alignItems||'flex-start'} 
                 justify={justify}
                 alignContent={alignContent}
                 direction={direction}
