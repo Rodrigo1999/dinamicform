@@ -68,7 +68,11 @@ function _default(props, ref) {
       init = _props$init === void 0 ? function () {
     return null;
   } : _props$init,
-      forwardRef = props.forwardRef;
+      forwardRef = props.forwardRef,
+      alignItems = props.alignItems,
+      justify = props.justify,
+      alignContent = props.alignContent,
+      direction = props.direction;
 
   var _useState = (0, _react.useState)({}),
       _useState2 = _slicedToArray(_useState, 2),
@@ -274,14 +278,11 @@ function _default(props, ref) {
 
   var comp = (0, _react.useCallback)(function (f) {
     return components.find(function (c) {
-      var type = [].concat(c.type);
-      return type.includes(f.type) || type.includes('default');
+      return [].concat(c.type).includes(f.type);
     });
   }, [components]);
 
   function _fields(f) {
-    var _comp;
-
     if (f.fields) return render(f.fields);
     if (f.type == 'component') return f === null || f === void 0 ? void 0 : f.content(_objectSpread(_objectSpread({}, props), {}, {
       handleValue: handleValue,
@@ -290,20 +291,27 @@ function _default(props, ref) {
       fields: fields,
       getAllFields: getAllFields(fields)
     }));
-    return (_comp = comp(f)) === null || _comp === void 0 ? void 0 : _comp.content(f);
+    return (comp(f) || components.find(function (e) {
+      return [].concat(e.type).includes('default');
+    })).content(f);
   }
 
   var render = (0, _react.useCallback)(function (fields) {
     return /*#__PURE__*/_react["default"].createElement(_Grid["default"], _extends({
       row: true,
-      alignItems: "flex-start",
+      alignItems: alignItems || 'flex-start',
+      justify: justify,
+      alignContent: alignContent,
+      direction: direction,
       spacing: spacing || 2
     }, grid.row), fields.filter(function (e) {
       return e.visible != false;
     }).map(function (f) {
       var _grid$col, _field$contentProps, _f$contentProps, _field$contentProps2, _f$contentProps2;
 
-      var field = comp(f);
+      var field = comp(f) || components.find(function (e) {
+        return [].concat(e.type).includes('default');
+      });
       return /*#__PURE__*/_react["default"].createElement(_Grid["default"], _extends({
         breakpoints: breakpoints,
         xs: f.col || 12,

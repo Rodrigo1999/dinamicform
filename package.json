@@ -1,12 +1,12 @@
 {
   "name": "dinamicform",
-  "version": "1.2.6",
+  "version": "1.2.7",
   "description": "Componente react para formulários, com o dinamicform você poderá criar formulários customizáveis e usar onde e como quiser",
-  "main": "./lib/index.js",
+  "main": "./dist/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack",
-    "boild": "babel ./src -d dist --copy-files"
+    "build-babel": "babel ./src -d dist --copy-files"
   },
   "peerDependencies": {
     "classnames": "^2.2.6",
