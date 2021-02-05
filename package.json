@@ -30,7 +30,8 @@
     "component",
     "custom",
     "auto",
-    "field"
+    "field",
+    "workhorse"
   ],
   "author": "Rodrigo Santos",
   "license": "MIT",
