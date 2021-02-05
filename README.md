@@ -10,7 +10,7 @@
 
 ![imagem de exemplo](https://uploaddeimagens.com.br/images/003/031/378/original/Captura_de_Tela_%2864%29.png?1610501567)
 
-Beleza, sendo bem breve, esse componente serve para você criar formulários usando apenas json, ficou confuso? calma que daqui a pouco você irá vê um exemplo.
+Beleza, sendo bem breve, esse componente serve para você criar formulários usando apenas json, é um workhorse, ficou confuso? calma que daqui a pouco você irá vê um exemplo.
 Atualmente com a demanda de tempo sendo grande em muitas empresas e os devs estando cada vez mais na correria, surge necessidade de padronização e fácil utilização
 de certos componentes, imagina você fazendo um formulário de 30 campos, kkkk nunca vi um assim, mas supondo que exista, escrever tudo na mão é meio cansativo;
 é aí que entra o dinamicform, ele irá te ajudar a acelerar o processo, segue um exemplo básico abaixo.
