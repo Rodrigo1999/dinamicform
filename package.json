@@ -1,6 +1,6 @@
 {
   "name": "dinamicform",
-  "version": "1.3.5",
+  "version": "1.3.6",
   "description": "Workhorse react para formulários, com o dinamicform você poderá criar formulários customizáveis e usar onde e como quiser",
   "main": "./dist/index.js",
   "scripts": {

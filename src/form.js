@@ -1,5 +1,4 @@
 import React, {useState, useEffect, useCallback, useImperativeHandle} from 'react';
-//import './index.css';
 import Grid from './Grid';
 import {Form} from './style';
 import classnames from 'classnames';
