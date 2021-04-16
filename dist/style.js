@@ -3,7 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports["default"] = void 0;
+exports.Form = void 0;
 
 var _react = _interopRequireDefault(require("react"));
 
@@ -25,7 +25,4 @@ function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(
 
 var Form = _styledComponents["default"].form(_templateObject());
 
-var _default = {
-  Form: Form
-};
-exports["default"] = _default;
+exports.Form = Form;
