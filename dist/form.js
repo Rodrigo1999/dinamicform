@@ -9,9 +9,9 @@ exports["default"] = _default;
 
 var _react = _interopRequireWildcard(require("react"));
 
-require("./index.css");
-
 var _Grid = _interopRequireDefault(require("./Grid"));
+
+var _style = require("./style");
 
 var _classnames = _interopRequireDefault(require("classnames"));
 
@@ -327,8 +327,7 @@ function _default(props, ref) {
     }));
   }, [fields, breakpoints, grid, spacing]); //---------------------------------------------- COMPONENTE -------------------------------------
 
-  return /*#__PURE__*/_react["default"].createElement("form", {
-    className: "AutoForm",
+  return /*#__PURE__*/_react["default"].createElement(_style.Form, {
     onSubmit: submit,
     style: {
       width: '100%'

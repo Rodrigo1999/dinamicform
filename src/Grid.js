@@ -45,6 +45,7 @@ export default function({
     sm,
     md,
     lg,
+    className,
     ...other
 }){
     let breakpoints = {
@@ -62,7 +63,7 @@ export default function({
     ):(
         <Col 
             {...other}
-            className={'grid-col '+other.className} 
+            className={'grid-col '+className} 
             breakpoints={breakpoints}
             xs={xs}
             xl={xl}

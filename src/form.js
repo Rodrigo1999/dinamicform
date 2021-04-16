@@ -1,6 +1,7 @@
 import React, {useState, useEffect, useCallback, useImperativeHandle} from 'react';
-import './index.css';
+//import './index.css';
 import Grid from './Grid';
+import {Form} from './style';
 import classnames from 'classnames';
 import {objectToForm} from './utils';
 
@@ -240,7 +241,7 @@ export default function(props, ref){
 //---------------------------------------------- COMPONENTE -------------------------------------
     return (
 
-        <form className='AutoForm' onSubmit={submit} style={{width:'100%'}}>
+        <Form onSubmit={submit} style={{width:'100%'}}>
             {render(fields)}
             {!hiddenButtonSubmit&&(beforeButton||onSubmit||afterButton) &&
                 <div className='content-buttons'>
@@ -250,7 +251,7 @@ export default function(props, ref){
                 </div>
                 
             }
-        </form>
+        </Form>
 		
     )
 }

@@ -79,7 +79,8 @@ function _default(_ref) {
       sm = _ref.sm,
       md = _ref.md,
       lg = _ref.lg,
-      other = _objectWithoutProperties(_ref, ["row", "spacing", "direction", "justify", "alignItems", "alignContent", "children", "breakpoints", "xs", "xl", "sm", "md", "lg"]);
+      className = _ref.className,
+      other = _objectWithoutProperties(_ref, ["row", "spacing", "direction", "justify", "alignItems", "alignContent", "children", "breakpoints", "xs", "xl", "sm", "md", "lg", "className"]);
 
   var breakpoints = {
     xs: (_breakpoints === null || _breakpoints === void 0 ? void 0 : _breakpoints.xs) || 0,
@@ -95,7 +96,7 @@ function _default(_ref) {
     direction: direction,
     alignItems: alignItems
   }, children) : /*#__PURE__*/_react["default"].createElement(Col, _extends({}, other, {
-    className: 'grid-col ' + other.className,
+    className: 'grid-col ' + className,
     breakpoints: breakpoints,
     xs: xs,
     xl: xl,
