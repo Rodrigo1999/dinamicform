@@ -23,7 +23,8 @@ export default function(props, ref){
         alignItems,
         justify,
         alignContent,
-        direction
+        direction,
+        className
     } = props;
 
     let [values, setValues] = useState({});
@@ -240,7 +241,7 @@ export default function(props, ref){
 //---------------------------------------------- COMPONENTE -------------------------------------
     return (
 
-        <Form onSubmit={submit} style={{width:'100%'}}>
+        <Form onSubmit={submit} className={className}>
             {render(fields)}
             {!hiddenButtonSubmit&&(beforeButton||onSubmit||afterButton) &&
                 <div className='content-buttons'>
