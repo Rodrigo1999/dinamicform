@@ -72,7 +72,8 @@ function _default(props, ref) {
       alignItems = props.alignItems,
       justify = props.justify,
       alignContent = props.alignContent,
-      direction = props.direction;
+      direction = props.direction,
+      className = props.className;
 
   var _useState = (0, _react.useState)({}),
       _useState2 = _slicedToArray(_useState, 2),
@@ -329,9 +330,7 @@ function _default(props, ref) {
 
   return /*#__PURE__*/_react["default"].createElement(_style.Form, {
     onSubmit: submit,
-    style: {
-      width: '100%'
-    }
+    className: className
   }, render(fields), !hiddenButtonSubmit && (beforeButton || onSubmit || afterButton) && /*#__PURE__*/_react["default"].createElement("div", {
     className: "content-buttons"
   }, beforeButton, onSubmit && button, afterButton));

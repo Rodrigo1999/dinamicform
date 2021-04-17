@@ -3,7 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports["default"] = exports.delay = exports.objectToForm = void 0;
+exports["default"] = exports.debounce = exports.objectToForm = void 0;
 
 function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
@@ -33,7 +33,7 @@ var expo = {
 
     return f;
   },
-  delay: function delay(fn, ms) {
+  debounce: function debounce(fn, ms) {
     var timer = 0;
     return function () {
       clearTimeout(timer);
@@ -48,7 +48,7 @@ var expo = {
 };
 var _objectToForm = expo.objectToForm;
 exports.objectToForm = _objectToForm;
-var delay = expo.delay;
-exports.delay = delay;
+var debounce = expo.debounce;
+exports.debounce = debounce;
 var _default = expo;
 exports["default"] = _default;

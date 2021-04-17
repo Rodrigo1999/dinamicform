@@ -1,5 +1,5 @@
 import form from './form';
-import {delay} from './utils';
+import {debounce} from './utils';
 
-export {delay}
+export {debounce}
 export default form;

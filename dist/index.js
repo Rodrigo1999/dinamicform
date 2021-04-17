@@ -3,10 +3,10 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-Object.defineProperty(exports, "delay", {
+Object.defineProperty(exports, "debounce", {
   enumerable: true,
   get: function get() {
-    return _utils.delay;
+    return _utils.debounce;
   }
 });
 exports["default"] = void 0;

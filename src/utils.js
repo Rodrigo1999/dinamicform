@@ -22,7 +22,7 @@ let expo = {
         }
         return f;
     },
-    delay(fn, ms) {
+    debounce(fn, ms) {
         let timer = 0
         return function(...args) {
           clearTimeout(timer)
@@ -32,5 +32,5 @@ let expo = {
 }
 
 export let objectToForm = expo.objectToForm;
-export let delay = expo.delay;
+export let debounce = expo.debounce;
 export default expo;
