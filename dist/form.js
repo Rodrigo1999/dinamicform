@@ -68,7 +68,7 @@ function _default(props, ref) {
       init = _props$init === void 0 ? function () {
     return null;
   } : _props$init,
-      forwardRef = props.forwardRef,
+      innerRef = props.innerRef,
       alignItems = props.alignItems,
       justify = props.justify,
       alignContent = props.alignContent,
@@ -258,7 +258,7 @@ function _default(props, ref) {
   } //---------------------------------------------- controle de referência -------------------------------------
 
 
-  (0, _react.useImperativeHandle)(Object.keys(forwardRef || ref || {}).length ? forwardRef || ref : {
+  (0, _react.useImperativeHandle)(Object.keys(innerRef || ref || {}).length ? innerRef || ref : {
     current: null
   }, function () {
     return {

@@ -150,7 +150,7 @@ Você também pode passar suas próprias props personalizadas e pegar em Form.co
         alignContent={/*...*/}
         direction={/*...*/}
         ref={/*...*/}
-        forwardRef={/*...*/}
+        innerRef={/*...*/}
         formData={false}
         init={form => console.log(form)}
         fields={[
@@ -202,7 +202,7 @@ Você também pode passar suas próprias props personalizadas e pegar em Form.co
 |alignContent| string | Padrão undefined, este é o align-content do flexbox, você passa os valore que ele aceita |
 |direction| string | Padrão undefined, este é o flex-direction do flexbox, você passa os valore que ele aceita |
 |ref | | passo a referência do formulário para acessar certas propriedades. |
-|forwardRef |  | caso eu não comsiga usar o ref (tem casos assim), eu tenho o forwardRef para aí sim me trazer o ref.|
+|innerRef |  | caso eu não comsiga usar o ref (tem casos assim), eu tenho o innerRef para aí sim me trazer o ref.|
 |formData | Bolean | por padrão o onSubmit traz dados em json, mas se eu quiser trazer no formato form/data eu passo essa props. |
 | init | function | escuto todas as propriedades, e posso salvar em uma variável ou algo assim, não confundir com ref, são conceitos diferentes.|
 |fields | array | passo os campos que quero no formulário. |

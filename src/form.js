@@ -19,7 +19,7 @@ export default function(props, ref){
         _onSubmit=()=>null,
         onChangeField=()=>null,
         init=()=>null,
-        forwardRef,
+        innerRef,
         alignItems,
         justify,
         alignContent,
@@ -173,7 +173,7 @@ export default function(props, ref){
 //---------------------------------------------- controle de referência -------------------------------------
     
     useImperativeHandle(
-        Object.keys(forwardRef||ref||{}).length ? forwardRef||ref : {current:null}
+        Object.keys(innerRef||ref||{}).length ? innerRef||ref : {current:null}
     , () => ({
         handleValue,
         submit,
