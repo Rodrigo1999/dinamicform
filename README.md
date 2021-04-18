@@ -395,11 +395,10 @@ o atributo é ` dependence: <indicador>-<ordem> ` aqui nesse exemplo coloquei "i
 country é superior a state que é superior a city, vai do menor para o maior. assim, toda vez que eu mudar o campo country por exemplo, o campo state e city irão limpar seus valores. Recomendo ver na prática.
 
 ### Funções utilitárias:
-
-|nome | exemplo |
-| -------- | -------- |
-|debounce | let change = useMemo(() => debounce(evt => console.log(evt), 400), [...]); |
-
+> debounce
+```js
+    let change = useMemo(() => debounce(evt => console.log(evt), 400), [...]);
+```
 ## Fim
 
 Bom, por enquanto é isso, espero que eu não esteja esquecendo de nada kkk, quem quiser contribuir, comentar algo, segue meu repositório.
