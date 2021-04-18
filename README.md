@@ -400,6 +400,8 @@ country é superior a state que é superior a city, vai do menor para o maior. a
     import {debounce} from 'dinamicform';
     /*...*/
     let change = useMemo(() => debounce(evt => console.log(evt), 400), [...]);
+
+    <input type='text' onChange={change}/>
 ```
 ## Fim
 
