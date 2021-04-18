@@ -13,8 +13,6 @@ var _Grid = _interopRequireDefault(require("./Grid"));
 
 var _style = require("./style");
 
-var _classnames = _interopRequireDefault(require("classnames"));
-
 var _utils = require("./utils");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
@@ -323,7 +321,7 @@ function _default(props, ref) {
         key: f.name
       }, field.contentProps, grid.col, f.contentProps, {
         style: _objectSpread(_objectSpread(_objectSpread({}, (_grid$col = grid.col) === null || _grid$col === void 0 ? void 0 : _grid$col.style), (_field$contentProps = field.contentProps) === null || _field$contentProps === void 0 ? void 0 : _field$contentProps.style), (_f$contentProps = f.contentProps) === null || _f$contentProps === void 0 ? void 0 : _f$contentProps.style),
-        className: (0, _classnames["default"])('form-field', (_field$contentProps2 = field.contentProps) === null || _field$contentProps2 === void 0 ? void 0 : _field$contentProps2.className, (_f$contentProps2 = f.contentProps) === null || _f$contentProps2 === void 0 ? void 0 : _f$contentProps2.className)
+        className: ['form-field', (_field$contentProps2 = field.contentProps) === null || _field$contentProps2 === void 0 ? void 0 : _field$contentProps2.className, (_f$contentProps2 = f.contentProps) === null || _f$contentProps2 === void 0 ? void 0 : _f$contentProps2.className].filter(Boolean).join(' ')
       }), f.beforeContent, f.wrap ? f.wrap(_fields(f)) : _fields(f), f.afterContent);
     }));
   }, [fields, breakpoints, grid, spacing]); //---------------------------------------------- COMPONENTE -------------------------------------

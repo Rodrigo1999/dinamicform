@@ -1,7 +1,6 @@
 import React, {useState, useEffect, useCallback, useImperativeHandle} from 'react';
 import Grid from './Grid';
 import {Form} from './style';
-import classnames from 'classnames';
 import {objectToForm} from './utils';
 
 export default function(props, ref){
@@ -227,7 +226,7 @@ export default function(props, ref){
                                 ...field.contentProps?.style,
                                 ...f.contentProps?.style,
                             }}
-                            className={classnames('form-field', field.contentProps?.className, f.contentProps?.className)}
+                            className={['form-field', field.contentProps?.className, f.contentProps?.className].filter(Boolean).join(' ')}
                         >
                             {f.beforeContent}
                             {f.wrap ? f.wrap(_fields(f)) : _fields(f)}
