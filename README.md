@@ -161,6 +161,24 @@ Você também pode passar suas próprias props personalizadas e pegar em Form.co
                 md:4,
                 lg:3,
                 xl:2,
+                input(value){
+                    /* retorno um valor de entrada*/
+                    return value+'_1234' 
+                    /* 
+                        nesse caso, esse campo name irá mostrar Rodrigo_1234 na tag Input ou 
+                        em qualquer outro componente de campo que você estiver usando
+                    */
+                },
+                output(value){
+                    /* retorno um valor de saída*/
+                    return value+'_1234' 
+                    /* 
+                        nesse caso, quando você submeter o formulário ele irá mostrar: {name: 'Rodrigo_1234', user: 'rodrigo@email.com'}
+                    */
+                },
+                error(e){
+                    // retorno um erro personalisado somente para esse campo
+                },
                 type:'text',
                 name:'name',
                 label:'Nome',
@@ -255,8 +273,10 @@ Você também pode passar suas próprias props personalizadas e pegar em Form.co
         /*...*/
     },
     {
+        //esse tipo de campo já está embutido no dinamicform, você não precisa criar entre seus campos customizados
         col:12,
-        component:(evt)=>(
+        type:'component',
+        content:(evt)=>(
             <div>
                 este hr é somente para separar um campo do outro
                 <hr/>
@@ -267,7 +287,7 @@ Você também pode passar suas próprias props personalizadas e pegar em Form.co
         /*...*/
     },
 ```
-o `component` retorna: (todas as props, handleValue, submit, clean(), fields, getAllFields())
+o `content` retorna: (todas as props, handleValue, submit, clean(), fields, getAllFields())
 
 <hr/>
 

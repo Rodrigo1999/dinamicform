@@ -287,6 +287,7 @@ function _default(props, ref) {
       handleValue: handleValue,
       submit: submit,
       clean: clean,
+      values: values,
       fields: fields,
       getAllFields: getAllFields(fields)
     }));

@@ -191,7 +191,7 @@ export default function(props, ref){
     let comp = useCallback((f) => components.find(c => [].concat(c.type).includes(f.type)), [components]);
     function _fields(f){
         if(f.fields) return render(f.fields);
-        if(f.type=='component') return f?.content({...props, handleValue, submit, clean, fields, getAllFields:getAllFields(fields)});
+        if(f.type=='component') return f?.content({...props, handleValue, submit, clean, values, fields, getAllFields:getAllFields(fields)});
 
         return (comp(f)||components.find(e => [].concat(e.type).includes('default'))).content(f);
     }
