@@ -41,7 +41,7 @@ export default function(props, ref){
     }, [fields, fixedFields]);
 
     //---------------------------------------------- alteração de valores -------------------------------------
-    let handleValue = useCallback((name, val, selected)=>{
+    let changeValue = useCallback((name, val, selected)=>{
         let allFd = getAllFields(fields);
         let fd = allFd.filter(e=>e.visible!=false).find(e=>e.name==name);
 
@@ -75,7 +75,7 @@ export default function(props, ref){
         props,
         errors,
         values,
-        handleValue,
+        changeValue,
         submit,
         clean,
         getAllFields
@@ -174,14 +174,14 @@ export default function(props, ref){
     useImperativeHandle(
         Object.keys(innerRef||ref||{}).length ? innerRef||ref : {current:null}
     , () => ({
-        handleValue,
+        changeValue,
         submit,
         clean,
         fields,
         getAllFields:getAllFields(fields)
     }));
     init({
-        handleValue,
+        changeValue,
         submit,
         clean,
         fields,
@@ -191,7 +191,7 @@ export default function(props, ref){
     let comp = useCallback((f) => components.find(c => [].concat(c.type).includes(f.type)), [components]);
     function _fields(f){
         if(f.fields) return render(f.fields);
-        if(f.type=='component') return f?.content({...props, handleValue, submit, clean, values, fields, getAllFields:getAllFields(fields)});
+        if(f.type=='component') return f?.content({...props, changeValue, submit, clean, values, fields, getAllFields:getAllFields(fields)});
 
         return (comp(f)||components.find(e => [].concat(e.type).includes('default'))).content(f);
     }

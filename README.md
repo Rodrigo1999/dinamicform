@@ -57,7 +57,7 @@ Abaixo há um exemplo, com um input tag bem simples para você entender o concei
         props,
         errors,
         values,
-        handleValue,
+        changeValue,
         submit,
         clean,
         getAllFields
@@ -91,7 +91,7 @@ Abaixo há um exemplo, com um input tag bem simples para você entender o concei
                                 type={field.type} 
                                 value={values[field.name]||''} // recomendo colocar o ||<formato do campo -> string|array|boolean/> caso contrário esse componente pode apresentar falhas; errado: value={values[field.name]}; certo: value={values[field.name] || []}
                                 onChange={evt => {
-                                    handleValue(field.name, evt.target.value)
+                                    changeValue(field.name, evt.target.value)
                                 }} 
                                 name={field.name}
                                 placeholder={field.placeholder}
@@ -124,7 +124,7 @@ Abaixo há um exemplo, com um input tag bem simples para você entender o concei
 |props | json | retorna todas as props passadas no componente <Form .../> |
 | errors | array | retorna todos os campos e seus respectivos erros, exemplo: ` [{name:'Campo Obrigatório'}, {username:'Formato Inválido'}] `|
 | values | json | retorna os valores do formulário. |
-| handleValue | function | função responsável por mudar um determinado campo do formulário `handleValue(<nome do campo>, <valor>, <qualquer coisa>)` o terceiro parámetro será ouvido no onChangeField(field, value, qualquer coisa) que você verá logo a seguir |
+| changeValue | function | função responsável por mudar um determinado campo do formulário `changeValue(<nome do campo>, <valor>, <qualquer coisa>)` o terceiro parámetro será ouvido no onChangeField(field, value, qualquer coisa) que você verá logo a seguir |
 | submit | function | função responsável pelo envio do formulário, não aceita parâmetro algum nem tem retorno. |
 | clean | function | função responsável por limpar o formulário, não aceita parâmetro algum nem tem retorno. |
 | getAllFields | function | retorna todos os campos do formulário. |
@@ -287,7 +287,7 @@ Você também pode passar suas próprias props personalizadas e pegar em Form.co
         /*...*/
     },
 ```
-o `content` retorna: (todas as props, handleValue, submit, clean(), fields, getAllFields())
+o `content` retorna: (todas as props, changeValue, submit, clean(), fields, getAllFields())
 
 <hr/>
 

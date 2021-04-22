@@ -102,7 +102,7 @@ function _default(props, ref) {
     }, {}));
   }, [fields, fixedFields]); //---------------------------------------------- alteração de valores -------------------------------------
 
-  var handleValue = (0, _react.useCallback)(function (name, val, selected) {
+  var changeValue = (0, _react.useCallback)(function (name, val, selected) {
     var allFd = getAllFields(fields);
     var fd = allFd.filter(function (e) {
       return e.visible != false;
@@ -132,7 +132,7 @@ function _default(props, ref) {
     props: props,
     errors: errors,
     values: values,
-    handleValue: handleValue,
+    changeValue: changeValue,
     submit: submit,
     clean: clean,
     getAllFields: getAllFields
@@ -260,7 +260,7 @@ function _default(props, ref) {
     current: null
   }, function () {
     return {
-      handleValue: handleValue,
+      changeValue: changeValue,
       submit: submit,
       clean: clean,
       fields: fields,
@@ -268,7 +268,7 @@ function _default(props, ref) {
     };
   });
   init({
-    handleValue: handleValue,
+    changeValue: changeValue,
     submit: submit,
     clean: clean,
     fields: fields,
@@ -284,7 +284,7 @@ function _default(props, ref) {
   function _fields(f) {
     if (f.fields) return render(f.fields);
     if (f.type == 'component') return f === null || f === void 0 ? void 0 : f.content(_objectSpread(_objectSpread({}, props), {}, {
-      handleValue: handleValue,
+      changeValue: changeValue,
       submit: submit,
       clean: clean,
       values: values,
